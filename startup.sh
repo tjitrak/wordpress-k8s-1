@@ -1,14 +1,14 @@
 # setup environment
-gcloud config set compute/zone us-west1
-WORKING_DIR=$(pwd)
-CLUSTER_VERSION=$(gcloud container get-server-config --region us-west1 --format='value(validMasterVersions[0])')
+# gcloud config set compute/zone us-west1
+# WORKING_DIR=$(pwd)
+# CLUSTER_VERSION=$(gcloud container get-server-config --region us-west1 --format='value(validMasterVersions[0])')
 
 
 
 # create GKE cluster
-CLUSTER_NAME=wp-cluster
-gcloud container clusters create $CLUSTER_NAME --region=us-west1 --machine-type=g1-small --num-nodes=1
-echo "GKE created"
+# CLUSTER_NAME=wp-cluster
+# gcloud container clusters create $CLUSTER_NAME --region=us-west1 --machine-type=g1-small --num-nodes=1
+# echo "GKE created"
 
 # create namespace
 kubectl apply -f namespace.yaml
